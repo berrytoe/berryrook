@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import mainVisual from '@/assets/maintenance.png'
+import colorLab from '@/assets/colorlab.png'
+---
+
+<Layout>
+  <header>
+    <Image
+      id="main-visual"
+      src={mainVisual}
+      alt="建設中"
+      width={320}
+      densities={[1]}
+      loading="eager"
+      fetchpriority="high"
+    />
+    <h1>berryrook</h1>
+    <p>berryrookは現在建設中です。</p>
+  </header>
+  <main>
+    <section>
+      <h2>Products</h2>
+      <div class="product">
+        <div class="link-card">
+          <Image
+            src={colorLab}
+            alt="Color Lab"
+            width={90}
+            densities={[1, 2, 3]}
+            loading="eager"
+          />
+          <hgroup>
+            <h3>Color Lab</h3>
+            <p>選んだ1色をもとに配色を提案するWebツール<br><a href="https://colorlab.berryrook.com/">colorlab.berryrook.com</a></p>
+          </hgroup>
+        </div>
+        <div class="credits">
+          <dl>
+            <dt>Created by</dt>
+            <dd><a href="https://x.com/veryberrytoe">berrytoe</a></dd>
+          </dl>
+          <dl>
+            <dt>Special Thanks💐:</dt>
+            <dd>&nbsp;<a href="https://www.instagram.com/antique.s.window/">ゆうな</a>, おいちゃん, ぴーさん</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+  <p>ご連絡の際は <a href="mailto:hello@berryrook.com">hello@berryrook.com</a> までお願いいたします。</p>
+  <footer>
+    <small>©2026 berryrook</small>
+  </footer>
+</Layout>
+
+<style is:global>
+:root {
+  color-scheme: only dark;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-optical-sizing: auto;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
+  line-height: 1.7;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  width: 600px;
+  min-height: 100vh;
+  margin-inline: auto;
+  padding: env(safe-area-inset-top, 0) calc(3% + env(safe-area-inset-right, 0))
+    env(safe-area-inset-bottom, 0) calc(3% + env(safe-area-inset-left, 0));
+  z-index: 0;
+}
+
+#main-visual {
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+h1 {
+  margin: 0 0 0.5em;
+  line-height: 1;
+}
+
+h2 {
+  margin: 1em 0 0.5em;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.product {
+  padding: 1.125em 1.5em 1.125em 1em;
+}
+
+.link-card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  margin-bottom: 0.5em;
+  border-radius: 5px;
+  
+  img {
+    border-radius: 50%;
+  }
+
+  h3 {
+    margin: 2px 0 0.5em;
+    line-height: 1;
+  }
+
+  p {
+    margin: 0.5em 0 0.75em;
+    line-height: 1.5;
+  }
+
+  a {
+    line-height: 2;
+  }
+}
+
+.credits {
+  padding: 0 0.25em;
+}
+
+dl {
+  margin: 0;
+}
+
+dt, dd {
+  display: inline;
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+}
+</style>
