@@ -1,0 +1,17 @@
+---
+type Props = { currentPath: string };
+const { currentPath } = Astro.props;
+const items = [
+  { href: "/products/biscetta/", label: "基本機能" },
+  { href: "/products/biscetta/faq/", label: "FAQ" },
+];
+const normalize = (path: string) => (path.endsWith("/") ? path : `${path}/`);
+---
+
+<nav class="page-navigation" aria-label="Biscetta ページナビゲーション">
+  {items.map((item) => (
+    <a href={item.href} aria-current={normalize(currentPath) === item.href ? "page" : undefined}>
+      {item.label}
+    </a>
+  ))}
+</nav>

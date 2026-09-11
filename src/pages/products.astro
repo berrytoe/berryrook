@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import colorLab from "@/assets/colorlab.png";
+import biscetta from "@/assets/biscetta.jpg";
+
+const title = "Products｜BERRYROOK";
+---
+
+<Layout title={title}>
+  <section>
+    <h1>Products</h1>
+    <div class="products">
+      <div class="product">
+        <Image src={biscetta} alt="biscetta" width={90} densities={[1, 2, 3]} loading="eager" />
+        <div>
+          <p class="product-name">Biscetta</p>
+          <a href="/products/biscetta">/products/biscetta</a>
+          <p>レシピ管理アプリ</p>
+        </div>
+      </div>
+      <div class="product">
+        <Image src={colorLab} alt="Color Lab" width={90} densities={[1, 2, 3]} loading="eager" />
+        <div>
+          <p class="product-name">Color Lab</p>
+          <a href="https://colorlab.berryrook.com/">colorlab.berryrook.com</a>
+          <p>選んだ1色をもとに配色を提案するWebツール</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

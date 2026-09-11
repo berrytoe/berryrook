@@ -1,0 +1,9 @@
+---
+import BiscettaLayout from "../../../layouts/BiscettaLayout.astro";
+import FaqContent from "../../../components/biscetta/FaqContent.astro";
+import { faqEntities } from "../../../lib/biscettaFaq";
+---
+
+<BiscettaLayout title="FAQ | Biscetta" description="Biscettaのデータ保存、購入・AI、同期、データ削除、プライバシーについて、事前に確認しておきたい事項をまとめています。" path="/products/biscetta/faq/" structuredData={{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqEntities }}>
+  <FaqContent />
+</BiscettaLayout>

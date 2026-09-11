@@ -1,0 +1,17 @@
+---
+import BiscettaLayout from "../../../layouts/BiscettaLayout.astro";
+import LegalDocument from "../../../components/biscetta/LegalDocument.astro";
+import { Content } from "../../../content/biscetta/terms.md";
+---
+
+<BiscettaLayout title="利用規約｜Biscetta" description="Biscettaの利用条件、有料機能、AIスマートパス、マルチデバイス同期などに関する利用規約です。" path="/products/biscetta/terms/">
+  <div class="legal-page">
+    <header class="legal-page__header">
+      <h1>利用規約</h1>
+      <p class="updated-at">最終更新日：2026年9月2日</p>
+    </header>
+    <LegalDocument>
+      <Content />
+    </LegalDocument>
+  </div>
+</BiscettaLayout>

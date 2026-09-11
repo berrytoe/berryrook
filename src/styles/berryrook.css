@@ -1,0 +1,164 @@
+:root {
+  color-scheme: only dark;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  font-optical-sizing: auto;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
+  line-height: 1.7;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  width: 600px;
+  min-height: 100dvh;
+  margin-inline: auto;
+  padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);
+  z-index: 0;
+}
+
+.skip-link {
+  position: fixed;
+  inset-block-start: 12px;
+  inset-inline-start: 12px;
+  z-index: 100;
+  translate: 0 -200%;
+  border-radius: 4px;
+  background: var(--biscetta-primary);
+  color: var(--biscetta-surface);
+  font-weight: 700;
+  padding: 12px 16px;
+}
+
+.skip-link:focus {
+  translate: 0;
+}
+
+header {
+  padding-block-start: 2.5em;
+  padding-inline: 3%;
+
+  a {
+    text-decoration: none;
+    color: currentColor;
+  }
+}
+
+header .site-name > * {
+  margin: 0;
+  text-align: center;
+  font-family: "Tienne", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5em;
+  line-height: 1;
+}
+
+.page-navigation ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.875em;
+  padding-inline-start: 2px;
+  font-family: "Tienne", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#main-visual {
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+h1 {
+  margin-block: 0.5em;
+  font-size: 1.75em;
+}
+
+h2 {
+  margin-block: 0.5em;
+  font-size: 1.5em;
+}
+
+h1,
+h2 {
+  font-family: "Tienne", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  padding-inline: 3%;
+}
+
+.products {
+  padding-block: 1.125em;
+  padding-inline-start: 0.25em;
+}
+
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  margin-bottom: 1.5em;
+  border-radius: 5px;
+
+  img {
+    border-radius: 50%;
+  }
+
+  h3 {
+    margin: 2px 0 0.5em;
+    line-height: 1;
+  }
+
+  p {
+    margin: 0.5em 0 0.75em;
+    line-height: 1.5;
+  }
+
+  a {
+    line-height: 2;
+  }
+
+  .product-name {
+    margin-block: 0;
+    font-size: 1.25em;
+  }
+}
+
+footer {
+  padding-block: 1em;
+  padding-inline: 3%;
+
+  small {
+    display: block;
+    text-align: center;
+  }
+}

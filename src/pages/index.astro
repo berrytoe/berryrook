@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import mainVisual from "@/assets/maintenance.png";
+---
+
+<Layout>
+  <Image id="main-visual" src={mainVisual} alt="建設中" width={320} densities={[1]} loading="eager" fetchpriority="high" />
+  <section>
+    <h2>News</h2>
+    <ul>
+      <li>
+        2026年5月2日 <a href="https://colorlab.berryrook.com/">Color Lab</a> を公開しました。
+      </li>
+    </ul>
+  </section>
+</Layout>

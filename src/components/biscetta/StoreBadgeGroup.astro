@@ -1,0 +1,32 @@
+---
+import GetGoogleplay from "@/assets/GetItOnGooglePlay_Badge_Print_color_Japanese.svg";
+import GetAppStore from "@/assets/Download_on_the_App_Store_Badge_JP.svg";
+
+const appStoreUrl = import.meta.env.PUBLIC_BISCETTA_APP_STORE_URL;
+const googlePlayUrl = import.meta.env.PUBLIC_BISCETTA_GOOGLE_PLAY_URL;
+const pending = !appStoreUrl || !googlePlayUrl;
+---
+
+<div class="download-band" aria-label="Biscettaをダウンロード">
+  <div class="store-group" aria-label="Biscettaの配信ストア">
+    {googlePlayUrl ? (
+      <a class="store-badge store-badge--google" href={googlePlayUrl} rel="external" aria-label="Google Playで手に入れよう（外部サイト）">
+        <GetGoogleplay />
+      </a>
+    ) : (
+      <span class="store-badge store-badge--google store-badge--pending" aria-label="Google Play版は公開準備中です">
+        <GetGoogleplay />
+      </span>
+    )}
+    {appStoreUrl ? (
+      <a class="store-badge store-badge--apple" href={appStoreUrl} rel="external" aria-label="App Storeからダウンロード（外部サイト）">
+        <GetAppStore />
+      </a>
+    ) : (
+      <span class="store-badge store-badge--apple store-badge--pending" aria-label="App Store版は公開準備中です">
+        <GetAppStore />
+      </span>
+    )}
+  </div>
+  {pending && <p class="store-note">iOS・Android版は公開準備中です。</p>}
+</div>

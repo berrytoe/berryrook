@@ -1,0 +1,17 @@
+---
+import BiscettaLayout from "../../../layouts/BiscettaLayout.astro";
+import LegalDocument from "../../../components/biscetta/LegalDocument.astro";
+import { Content } from "../../../content/biscetta/privacy.md";
+---
+
+<BiscettaLayout title="プライバシーポリシー | Biscetta" description="Biscettaが保存、送信または取得する情報と、その取扱いについて説明します。" path="/products/biscetta/privacy-policy/">
+  <div class="legal-page">
+    <header class="legal-page__header">
+      <h1>プライバシーポリシー</h1>
+      <p class="updated-at">最終更新日：2026年9月7日</p>
+    </header>
+    <LegalDocument>
+      <Content />
+    </LegalDocument>
+  </div>
+</BiscettaLayout>

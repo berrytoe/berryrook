@@ -1,0 +1,116 @@
+---
+import { Image } from "astro:assets";
+import BiscettaLayout from "../../../layouts/BiscettaLayout.astro";
+import StoreBadgeGroup from "../../../components/biscetta/StoreBadgeGroup.astro";
+import home from "@/assets/biscetta/screenshot_home.png";
+import drawer from "@/assets/biscetta/screenshot_drawer.jpg";
+import search from "@/assets/biscetta/screenshot_search.jpg";
+import appIcon from "@/assets/biscetta/app-icon.jpg";
+
+const title = "Biscetta｜レシピ管理アプリ";
+const description = "SNSやWebで見つけたレシピも、自分だけのレシピも、まとめて保存・整理・検索。お気に入りのレシピを、あとからすぐ見つけられる。iOS／Androidアプリ「Biscetta」の公式サイトです。";
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Biscetta",
+  applicationCategory: "LifestyleApplication",
+  operatingSystem: "iOS, Android",
+  description,
+  url: "https://berryrook.com/products/biscetta/",
+  publisher: { "@type": "Organization", name: "BERRYROOK" },
+};
+---
+
+<BiscettaLayout title={title} description={description} path="/products/biscetta/" structuredData={structuredData}>
+  <div>
+    <div class="description">
+      <p class="site-header__tagline">レシピの居場所をひとつに。</p>
+      <p class="site-header__lead">
+        整理も検索もかんたん！
+        <br />
+        レシピ管理アプリ「Biscetta」
+      </p>
+    </div>
+    <div class="site-header__stores">
+      <Image src={home} alt="" width={200} densities={[1, 2, 3]} loading="eager" />
+      <StoreBadgeGroup />
+    </div>
+  </div>
+  <article>
+    <header class="page-intro">
+      <h1>基本機能</h1>
+    </header>
+    <section class="feature-section" aria-labelledby="save-title">
+      <h2 id="save-title">
+        レシピの
+        <br />
+        保存方法は２つ
+      </h2>
+      <div class="save-grid">
+        <article class="compact-feature">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.9">
+              <path d="M28.5625 45.75H18.25C14.4458 45.75 11.2031 44.4077 8.52188 41.7231C5.84063 39.039 4.5 35.7925 4.5 31.9835C4.5 28.1751 5.84063 24.934 8.52188 22.2604C11.2031 19.5868 14.4458 18.25 18.25 18.25H28.5625V23.4063H18.25C15.8628 23.4063 13.8338 24.2418 12.1628 25.9128C10.4918 27.5838 9.65625 29.6128 9.65625 32C9.65625 34.3872 10.4918 36.4162 12.1628 38.0872C13.8338 39.7582 15.8628 40.5938 18.25 40.5938H28.5625V45.75ZM21.6875 34.5781V29.4219H42.3125V34.5781H21.6875ZM35.4375 45.75V40.5938H45.75C48.1372 40.5938 50.1662 39.7582 51.8372 38.0872C53.5082 36.4162 54.3438 34.3872 54.3438 32C54.3438 29.6128 53.5082 27.5838 51.8372 25.9128C50.1662 24.2418 48.1372 23.4063 45.75 23.4063H35.4375V18.25H45.75C49.5542 18.25 52.7969 19.5923 55.4781 22.2769C58.1594 24.961 59.5 28.2075 59.5 32.0165C59.5 35.8249 58.1594 39.066 55.4781 41.7396C52.7969 44.4132 49.5542 45.75 45.75 45.75H35.4375Z" fill="#704E46" />
+            </g>
+          </svg>
+          <h3>URLから保存</h3>
+          <p>Webで見つけたレシピのURLを入力。もしくはブラウザの共有機能から保存できます。</p>
+        </article>
+        <article class="compact-feature">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.9">
+              <path
+                d="M19.533 43.0857C21.3556 43.0857 23.1295 43.3167 24.8547 43.7786C26.5803 44.2405 28.2707 44.8178 29.9259 45.5107V19.2976C28.3092 18.4508 26.6348 17.8157 24.9026 17.3922C23.1705 16.9688 21.3764 16.7571 19.5203 16.7571C18.0984 16.7571 16.6865 16.8822 15.2846 17.1324C13.8828 17.3826 12.5275 17.7964 11.2187 18.3738V44.4714C12.5659 43.971 13.9288 43.615 15.3072 43.4033C16.6859 43.1916 18.0946 43.0857 19.533 43.0857ZM34.083 45.5107C35.7382 44.7409 37.4285 44.1442 39.1541 43.7208C40.8793 43.2974 42.6533 43.0857 44.4758 43.0857C45.9001 43.0857 47.3146 43.1723 48.7196 43.3455C50.1246 43.5187 51.4814 43.894 52.7901 44.4714V18.3738C51.4429 17.8734 50.0728 17.4788 48.6798 17.1902C47.2867 16.9015 45.8839 16.7571 44.4712 16.7571C42.6267 16.7571 40.8384 16.9688 39.1062 17.3922C37.3741 17.8157 35.6997 18.4508 34.083 19.2976V45.5107ZM32.0044 51.4C30.1183 50.1682 28.136 49.1675 26.0574 48.3976C23.9788 47.6278 21.804 47.2428 19.533 47.2428C18.0703 47.2428 16.6076 47.3872 15.1449 47.6759C13.6822 47.9646 12.2773 48.3976 10.93 48.975C10.0062 49.3599 9.13053 49.292 8.30295 48.7712C7.47537 48.2504 7.06158 47.4907 7.06158 46.4923V17.45C7.06158 16.9111 7.20593 16.4107 7.49462 15.9488C7.78331 15.4869 8.17785 15.1405 8.67825 14.9095C10.4104 14.1397 12.1818 13.5623 13.9925 13.1774C15.8031 12.7924 17.65 12.6 19.533 12.6C21.7251 12.6 23.8699 12.8598 25.9673 13.3794C28.0648 13.8991 30.0771 14.6785 32.0044 15.7178C33.9675 14.717 35.992 13.9472 38.0779 13.4083C40.1634 12.8694 42.296 12.6 44.4758 12.6C46.3589 12.6 48.2057 12.7924 50.0164 13.1774C51.8271 13.5623 53.5985 14.1397 55.3306 14.9095C55.831 15.1405 56.2352 15.4869 56.5431 15.9488C56.851 16.4107 57.005 16.9111 57.005 17.45V46.4923C57.005 47.4546 56.7067 48.2244 56.1101 48.8018C55.5134 49.3792 54.8879 49.5139 54.2336 49.2059C52.6939 48.5131 51.1065 48.0127 49.4713 47.7048C47.8366 47.3968 46.1714 47.2428 44.4758 47.2428C42.2048 47.2428 40.03 47.6278 37.9514 48.3976C35.8729 49.1675 33.8905 50.1682 32.0044 51.4Z"
+                fill="#704E46"
+              />
+            </g>
+          </svg>
+          <h3>マイレシピを作成</h3>
+          <p>お手持ちのレシピブック、試作段階のレシピや秘伝のレシピも、手順を１つずつ写真付きで保存できます。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="feature-section" aria-labelledby="daily-title">
+      <h2 id="daily-title">
+        毎日使うから、
+        <br />
+        うれしい機能
+      </h2>
+      <div class="feature-row">
+        <div>
+          <Image src={drawer} alt="" width={300} densities={[1, 2, 3]} loading="lazy" />
+          <div class="text">
+            <h3>
+              保存したレシピは、
+              <br />
+              カテゴリで整理
+            </h3>
+            <p>「平日ごはん」「お弁当」「デザート」など、自分好みに分類できます。</p>
+          </div>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div>
+          <Image src={search} alt="" width={300} densities={[1, 2, 3]} loading="lazy" />
+          <div class="text">
+            <h3>見つけるのも簡単</h3>
+            <p>タイトル、材料、メモから、作りたいレシピをすばやく発見。材料の表記揺れにも対応しています。旬の食材から探す機能も。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+  <div>
+    <p class="closing-copy">
+      お気に入りのレシピが、
+      <br />
+      もう迷子になりません。
+    </p>
+    <div class="app-icon">
+      <Image src={appIcon} alt="" width={150} densities={[1, 2, 3]} loading="lazy" />
+      <span>Biscetta</span>
+    </div>
+    <StoreBadgeGroup />
+  </div>
+</BiscettaLayout>

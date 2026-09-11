@@ -1,0 +1,10 @@
+---
+type Props = { question: string; open?: boolean };
+const { question, open = false } = Astro.props;
+---
+
+<details class="faq-item" open={open}>
+  <summary>{question}</summary>
+  <div class="faq-answer"><slot /></div>
+</details>
+

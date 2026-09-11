@@ -1,0 +1,18 @@
+---
+import ProductNavigation from "./ProductNavigation.astro";
+import Logo from "@/assets/biscetta/logo.svg";
+
+type Props = { currentPath: string };
+const { currentPath } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="/products/biscetta/" aria-label="トップページへ">
+      <Logo class={"logo"} />
+    </a>
+    <div class="site-header__nav-shell">
+      <ProductNavigation currentPath={currentPath} />
+    </div>
+  </div>
+</header>

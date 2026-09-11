@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import ProductNavigation from "./ProductNavigation.astro";
+import signboard from "@/assets/biscetta/signboard.png";
+
+type Props = { currentPath: string };
+const { currentPath } = Astro.props;
+---
+
+<footer class="site-footer">
+  <a href="/products/biscetta/" aria-label="トップページへ">
+    <Image src={signboard} class={"signboard"} alt="Biscetta" width={200} densities={[1, 2, 3]} loading="lazy" />
+  </a>
+  <div class="inner">
+    <ProductNavigation currentPath={currentPath} />
+    <nav class="legal-navigation" aria-label="法務情報">
+      <a href="/products/biscetta/terms/">利用規約</a>
+      <a href="/products/biscetta/privacy-policy/">プライバシーポリシー</a>
+      <a href="/products/biscetta/legal/">特定商取引法に基づく表記</a>
+    </nav>
+    <p>
+      お問い合わせは、<a href="mailto:biscetta@berryrook.com">biscetta@berryrook.com</a> までお願いいたします。
+    </p>
+    <small>
+      © 2026 <a href="/">BERRYROOK</a>
+    </small>
+  </div>
+</footer>

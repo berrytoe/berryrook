@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://berryrook.com/sitemap.xml
