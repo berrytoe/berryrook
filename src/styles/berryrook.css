@@ -81,6 +81,7 @@ header .site-name > * {
   margin: 0;
   padding-inline-start: 2px;
   font-family: "Tienne", serif;
+  font-size: 1.125em;
   font-weight: 400;
   font-style: normal;
 }
