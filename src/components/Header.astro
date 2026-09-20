@@ -1,10 +1,14 @@
 ---
+import { Image } from "astro:assets";
+import symbol from "@/assets/logo_symbol.png";
+
 type Props = { currentPath: string };
 const { currentPath } = Astro.props;
 const siteName = "BERRYROOK";
 ---
 
 <header>
+  <Image src={symbol} width={172} alt={""} style={"margin-inline: auto; display: block; image-rendering: pixelated; text-align: center"} />
   <a href="/" class="site-name" aria-label="トップページへ">
     {currentPath === "/" ? <h1>{siteName}</h1> : <div>{siteName}</div>}
   </a>
