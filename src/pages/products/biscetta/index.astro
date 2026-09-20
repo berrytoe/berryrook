@@ -32,7 +32,7 @@ const structuredData = {
       </p>
     </div>
     <div class="site-header__stores">
-      <Image src={home} alt="" width={200} densities={[1, 2, 3]} loading="eager" />
+      <Image src={home} alt="" width={200} height={408} quality="max" densities={[1, 2, 3]} loading="eager" />
       <StoreBadgeGroup />
     </div>
   </div>
@@ -79,7 +79,9 @@ const structuredData = {
       </h2>
       <div class="feature-row">
         <div>
-          <Image src={drawer} alt="" width={300} densities={[1, 2, 3]} loading="lazy" />
+          <div class="image-container">
+            <Image src={drawer} alt="" width={300} height={349} quality="max" densities={[1, 2, 3]} loading="lazy" />
+          </div>
           <div class="text">
             <h3>
               保存したレシピは、
@@ -92,7 +94,9 @@ const structuredData = {
       </div>
       <div class="feature-row">
         <div>
-          <Image src={search} alt="" width={300} densities={[1, 2, 3]} loading="lazy" />
+          <div class="image-container">
+            <Image src={search} alt="" width={300} height={349} quality="max" densities={[1, 2, 3]} loading="lazy" />
+          </div>
           <div class="text">
             <h3>見つけるのも簡単</h3>
             <p>タイトル、材料、メモから、作りたいレシピをすばやく発見。材料の表記揺れにも対応しています。旬の食材から探す機能も。</p>
@@ -108,7 +112,7 @@ const structuredData = {
       もう迷子になりません。
     </p>
     <div class="app-icon">
-      <Image src={appIcon} alt="" width={150} densities={[1, 2, 3]} loading="lazy" />
+      <Image src={appIcon} alt="" width={150} format="png" densities={[1, 2, 3]} loading="lazy" />
       <span>Biscetta</span>
     </div>
     <StoreBadgeGroup />

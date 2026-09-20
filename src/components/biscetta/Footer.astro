@@ -9,7 +9,7 @@ const { currentPath } = Astro.props;
 
 <footer class="site-footer">
   <a href="/products/biscetta/" aria-label="トップページへ">
-    <Image src={signboard} class={"signboard"} alt="Biscetta" width={200} densities={[1, 2, 3]} loading="lazy" />
+    <Image src={signboard} class={"signboard"} alt="Biscetta" width={200} format="png" densities={[1, 2, 3]} loading="lazy" />
   </a>
   <div class="inner">
     <ProductNavigation currentPath={currentPath} />

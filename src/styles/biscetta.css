@@ -310,10 +310,11 @@ h3 {
   margin-inline: auto;
 }
 
-.feature-row img {
+.feature-row .image-container {
   margin-bottom: 1em;
   border: 4px solid var(--biscetta-text-primary);
   border-radius: 32px;
+  overflow: hidden;
 }
 
 .feature-row h3,
